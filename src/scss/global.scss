@@ -15,6 +15,8 @@ body {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -138,6 +140,11 @@ form {
   display: flex;
   flex-wrap: wrap;
 
+  label{
+    color: #fff;
+    display: inline-block;
+  }
+
   input{
     width: 100%;
   }
@@ -187,8 +194,7 @@ form {
     font-family: 'Raleway', sans-serif;
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
-    border: 2px solid #ccc;
+    appearance: none;    
     transition: all .3s;
 
     &:focus{

@@ -1,23 +1,29 @@
 <template>
   <div id="main">  
 
-    <div v-if="errors" class="erros">
-        <p><strong>Por favor corrija os seguintes erros:</strong> </p>
-        <ul>
-          <li v-for="error in errors" :key="error">{{ error }}</li>
-        </ul>
-        
-      </div>
-      <form @submit.prevent="handleSubmit" v-if="!savingSuccessful">            
-        <div class="form-item">
-            <input type="text" v-model="name" class="nome" placeholder="Seu nome *"/>        
+    <div class="container">
+     
+      <form @submit.prevent="handleSubmit" v-if="!savingSuccessful">    
+
+         <div v-if="errors" class="erros">
+            <p><strong>Por favor corrija os seguintes erros:</strong> </p>
+            <ul>
+              <li v-for="error in errors" :key="error">{{ error }}</li>
+            </ul>        
         </div>
-        <div class="form-item">        
-            <input type="email" v-model="email" class="email" placeholder="Seu email *"/>        
+                
+        <div class="form-item">
+          <label for="Login">Login</label>   
+            <input type="text" v-model="login" class="login" />        
+        </div>
+        <div class="form-item">     
+          <label for="Senha">Senha</label>   
+            <input type="password" v-model="password" class="password" />        
+        </div>               
+
+        <div class="form-item">
+            <input type="checkbox" name="connected" class="connected" /><label for="connected">Manter-me conectado</label>
         </div>         
-        <div class="form-item">        
-            <textarea v-model="message" cols="30" rows="10" placeholder="Sua mensagem *"></textarea>
-        </div>            
 
         <div v-if="loading" class="form-item">
           <div class="loading">
@@ -26,27 +32,23 @@
           </div>           
         </div>
         <div v-else class="form-item">
-          <button class="btn enviar">Enviar <i class="fa-solid fa-paper-plane"></i></button>
+          <button class="btn enviar">Conectar </button>
         </div>
-    </form>
-    
-   
+      </form>
+
+    </div>
 
   </div><!-- main -->
 </template>
 
 <script>
 
-import axios from "axios";
-
 export default {
   name: 'HomeView',
   data(){
         return{
-            "name": "",
-            "email": "",
-            "subject": "",
-            "message": "",
+            "login": "",
+            "password": "",            
             savingSuccessful: false,
             status: null,
             errors: "",
@@ -55,34 +57,21 @@ export default {
     },
     methods: {
         handleSubmit(){
-            const dados = {
-                webform_id: "contact",
-                name: this.name,
-                email: this.email,
-                subject: "Contato pelo site",
-                message: this.message
-            };
-            if(this.name && this.email && this.message){
+            /*const dados = {                
+                login: this.login,
+                password: this.password                
+            };*/
+            if(this.login && this.password){
               this.loading = true;
-              console.log('loading...');
-              axios.post('https://eliel.dev/admin/web/webform_rest/submit?api-key=22e4270419275992f36377939ac2e113', dados).then( res => {                
-                console.log(res);                
-                this.errors = false;                
-                this.loading = false;                
-                this.savingSuccessful = true;
-              }).catch( err => {
-                  console.log(err);                
-              });  
+              //console.log('loading...');              
+              this.$router.push("/menus");
             }else{        
               this.errors = [];      
-              if(!this.name){                
-                this.errors.push("Informe o seu nome");
+              if(!this.login){                
+                this.errors.push("Informe seu usuário");
               }
-              if(!this.email){
-                this.errors.push("Informe o seu email");
-              }
-              if(!this.message){
-                this.errors.push("Escreva a sua mensagem");
+              if(!this.password){
+                this.errors.push("Informe sua senha");
               }
             }              
           }                     
@@ -91,18 +80,42 @@ export default {
 </script>
 
 <style lang="scss">
-
+/*
 section{  
   margin-bottom: 100px;
   h2 {
     text-transform: uppercase;
   }    
-}
+}*/
 
 #main{
   .container{
-    max-width: 1300px;    
-    margin: auto;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  form{
+    border-radius: 30px;
+    padding: 6em 2em 2em 2em;
+    background: $vermelho url(@/assets/ico-mcd.png) center 2em no-repeat;
+    max-width: 500px;
+
+    .erros{
+      width: 100%;
+      border: 1px solid #fff;
+      padding: .5em 2em 1em 2em;
+      color: #fff;
+      margin-bottom: 1em;
+    }
+
+    .form-item{
+      width: 100%;
+      margin: 0 0 2em 0;
+    }
   }
 }
 </style>
