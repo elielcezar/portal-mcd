@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #4c4d4d;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  background: #f5f5f5 url(@/assets/bg.jpg) top center no-repeat;
+  background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+section .title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+  /*@media(orientation:portrait){
+    justify-content: center;
+  }*/
+}
+section .title::after {
+  content: "";
+  width: 60%;
+  height: 4px;
+  display: block;
+  background: -webkit-linear-gradient(315deg, #42aad3 25%, rgba(100, 126, 255, 0.5098039216));
+  position: absolute;
+  right: 0;
+  top: 52%;
+}
+@media (orientation: portrait) {
+  section .title::after {
+    top: 80%;
+  }
+}
+section .title h3 {
+  margin: 0;
+  font-size: 7em;
+  line-height: 1em;
+  letter-spacing: -5px;
+  font-weight: 800;
+  color: #fff;
+  opacity: 0.1;
+  text-transform: uppercase;
+  color: #999;
+}
+@media (orientation: portrait) {
+  section .title h3 {
+    font-size: 5em;
+  }
+}
+section .title span {
+  display: inline-block;
+  position: absolute;
+  color: #333;
+  font-weight: 700;
+  font-size: 2em;
+  margin: 7px 0 0 0;
+  letter-spacing: -1px;
+  line-height: 1em;
+  text-align: center;
+}
+@media (orientation: portrait) {
+  section .title span {
+    font-size: 1.7em;
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.4em;
+}
+
+a,
+a:active,
+a:visited {
+  color: #333;
+  text-decoration: none;
+  outline: none !important;
+  transition: all 0.3s;
+}
+a:hover,
+a:active:hover,
+a:visited:hover {
+  color: #da291c;
+}
+
+label {
+  color: #666;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form-item {
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+
+.form-item p {
+  margin: 0;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+form label {
+  color: #fff;
+  display: inline-block;
+}
+form input {
+  width: 100%;
+}
+form .form-item:nth-child(1) {
+  width: 48%;
+  margin: 0 2% 15px 0;
+}
+form .form-item:nth-child(2) {
+  width: 48%;
+  margin: 0 0 20px 2%;
+}
+form .form-item:nth-child(3) {
+  width: 100%;
+  margin: 20px 0;
+}
+form .form-item.textarea {
+  width: 100%;
+  margin: 0 0 0 0;
+}
+form input[type=submit]:hover {
+  background: #000;
+}
+form input[type=text],
+form input[type=email],
+form input[type=password],
+form input[type=tel],
+form textarea,
+form select {
+  width: 100%;
+  background: #fff;
+  margin-bottom: 10px;
+  font-size: 16px;
+  outline: none !important;
+  box-sizing: border-box;
+  border: none;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 25px;
+  padding: 15px 20px;
+  margin: 0 5px;
+  font-family: "Raleway", sans-serif;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: all 0.3s;
+}
+form input[type=text]:focus,
+form input[type=email]:focus,
+form input[type=password]:focus,
+form input[type=tel]:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #da291c;
+}
+@media (max-width: 767px) {
+  form input[type=text],
+  form input[type=email],
+  form input[type=password],
+  form input[type=tel],
+  form textarea,
+  form select {
+    padding: 5%;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+button,
+input[type=submit] {
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+  outline: none !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  border-radius: 50px;
+  width: 100%;
+  background: #da291c;
+  transition: all 0.3s;
+  background: #8b1515;
+}
+button:hover,
+input[type=submit]:hover {
+  background: #8b1515;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  overflow-x: hidden;
+}
+
+#main .container {
+  max-width: 1300px;
+  margin: auto;
+}
+@media (max-width: 1300px) {
+  #main .container {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+}
+@media (max-width: 1400px) {
+  #main .container {
+    max-width: 1200px;
+  }
+}/*# sourceMappingURL=global.css.map */

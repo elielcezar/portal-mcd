@@ -21,8 +21,8 @@
             <input type="password" v-model="password" class="password" />        
         </div>               
 
-        <div class="form-item">
-            <input type="checkbox" name="connected" class="connected" /><label for="connected">Manter-me conectado</label>
+        <div class="form-item conectado">
+            <input type="checkbox" v-model="connected" class="connected" /><label for="connected">Manter-me conectado</label>
         </div>         
 
         <div v-if="loading" class="form-item">
@@ -68,10 +68,10 @@ export default {
             }else{        
               this.errors = [];      
               if(!this.login){                
-                this.errors.push("Informe seu usuário");
+                this.errors.push("- Informe seu usuário");
               }
               if(!this.password){
-                this.errors.push("Informe sua senha");
+                this.errors.push("- Informe sua senha");
               }
             }              
           }                     
@@ -114,7 +114,20 @@ section{
 
     .form-item{
       width: 100%;
-      margin: 0 0 2em 0;
+      margin: 0 0 2em 0;      
+    }
+
+    .conectado{
+      display: flex;
+      justify-content: flex-start;
+      input{
+        width: 25px;
+        margin-right: 10px;
+      }
+      label{
+        display: inline-block;        
+        padding: 10px 0 0 0;
+      }
     }
   }
 }
