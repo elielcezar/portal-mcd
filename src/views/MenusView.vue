@@ -2,34 +2,33 @@
   <div id="menus">  
     <div class="container">      
       <div class="carrossel">         
-            <div class="item gerenciador">
+            <div class="item gerenciador" @click="$router.push('/gerenciador')">
               <p>Gerenciador de Produtos</p>
             </div>
-            <div class="item promos">
+            <div class="item promos" @click="$router.push('/promos')">
               <p>Promos</p>
             </div>
-            <div class="item takeovers">
+            <div class="item takeovers" @click="$router.push('/takeovers')">
               <p>Takeovers</p>
             </div>
-            <div class="item ofertas">
+            <div class="item ofertas" @click="$router.push('/ofertas')">
               <p>Ofertas por tempo limitado</p>
             </div>
-            <div class="item chamados">
+            <div class="item chamados" @click="$router.push('/chamados')">
               <p>Abertura de chamado</p>
             </div>
-            <div class="item tutoriais">
+            <div class="item tutoriais" @click="$router.push('/tutoriais')">
               <p>Tutoriais</p>
             </div>
-            <div class="item programacao">
+            <div class="item programacao" @click="$router.push('/programacao')">
               <p>Programação Liga/Desliga</p>
             </div>
-            <div class="item status">
+            <div class="item status" @click="$router.push('/status')">
               <p>Status telas</p>
             </div>    
-      </div>
-   
+      </div>   
     </div>
-  </div><!-- main -->
+  </div>
 </template>
 
 <script>
@@ -74,7 +73,7 @@ export default {
         }
     },
     methods: {
-                       
+                             
     }
 }
 </script>
@@ -119,7 +118,8 @@ export default {
           background-position: center 1em;
           background-repeat: no-repeat;
           transition: all .3s;
-          text-align: center;                 
+          text-align: center;    
+          cursor: pointer;             
 
           &:hover{
             flex: 180px;
