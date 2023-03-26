@@ -7,22 +7,24 @@
       <div class="container">
         <h2>Atualizar produtos</h2>
         <form>
-          <div class="form-item">
+
+          <div class="form-item flex">
             <label>Que locais você deseja atualizar:</label>
+            
             <select name="local" id="local">
-              <option value="BALCAO IPU VERTICAL  |  2 TELAS"></option>
-              <option value="BALCAO IPU VERTICAL  |  3 TELAS"></option>
-              <option value="BALCAO IPU VERTICAL  |  5 TELAS"></option>
+              <option value="BALCAO IPU VERTICAL  |  2 TELAS">BALCAO IPU VERTICAL  |  2 TELAS</option>
+              <option value="BALCAO IPU VERTICAL  |  3 TELAS">BALCAO IPU VERTICAL  |  3 TELAS</option>
+              <option value="BALCAO IPU VERTICAL  |  5 TELAS">BALCAO IPU VERTICAL  |  5 TELAS</option>
             </select>
           </div>
 
-          <div class="form-item">
+          <div class="form-item flex">
             <label>Selecione o(s) produtos que deseja atualizar:</label>
             <select name="produtos" id="prodsutos">
-              <option value="MCLANCHE - DISNEY"></option>
-              <option value="MCLANCHE - MINIONS"></option>
-              <option value="MCLANCHE - PRINCESAS"></option>
-              <option value="MCLANCHE - CARROS"></option>
+              <option value="MCLANCHE - DISNEY">MCLANCHE - DISNEY</option>
+              <option value="MCLANCHE - MINIONS">MCLANCHE - MINIONS</option>
+              <option value="MCLANCHE - PRINCESAS">MCLANCHE - PRINCESAS</option>
+              <option value="MCLANCHE - CARROS">MCLANCHE - CARROS</option>
             </select>
           </div>
 
@@ -95,36 +97,32 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 #main{
-  display: flex;
-
+  //display: flex;
   
   #content{
-    width: 100%;
+   // width: 100%;
 
     .container{
-      width: 80%;      
-      margin: auto;
-      background: #fff;
-
-      h2, h3, p, ul, label{
-        color: $preto;
-      }
-
+     
       form{
-        background: transparent;
-        padding: 0;
-        margin: 0;
-        border-radius: 0
 
-        select{
-          color: $preto;
-          border: 1px solid #666 !important;
-          padding: 7px 15px;
-          border-radius: 50px;
-        }
+        /*.form-item.flex{
+          display: flex;
+          align-items: center;
+          width: 100%;
+          margin: 0 0 20px 0;
+
+          label{
+            width: 50%;  
+            margin: 0;          
+          }
+          select{
+              width: 50%;
+            }
+        }*/
       }
 
     }

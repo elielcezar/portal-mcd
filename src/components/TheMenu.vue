@@ -46,6 +46,7 @@ export default {
     display: flex;
     justify-content: flex-start;
     padding: 20px 0 0 0;
+    min-height: 100vh;
     
     .item{                            
           width: 100%;
@@ -58,15 +59,7 @@ export default {
           background-repeat: no-repeat;
           transition: all .3s;
           text-align: left;    
-          cursor: pointer;             
-
-          &:hover{            
-            /*flex: 180px;
-            max-width: 180px;
-            height: 220px;
-            padding-top: 10em;
-            background-size: auto 150px;*/
-          }
+          cursor: pointer;         
           
           &.gerenciador{            
             background-image: url(@/assets/ico-hamburguer.png);
@@ -103,7 +96,17 @@ export default {
             height: 50px;
             display: flex;
             align-items: center;
+            transition: all .3s;
           }
         }
+
+        .item.active,
+        .item:hover{            
+          p{
+            color: $amarelo;
+          }
+        }
+
+        
   }
 </style>

@@ -79,7 +79,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 /*
 section{  
   margin-bottom: 100px;
@@ -127,8 +127,12 @@ section{
       label{
         display: inline-block;        
         padding: 10px 0 0 0;
-      }
+      }      
     }
+
+    button{
+        background: $vermelho-escuro;        
+      }
   }
 }
 </style>
