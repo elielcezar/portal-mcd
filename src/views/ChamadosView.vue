@@ -15,12 +15,14 @@
 <script>
 
 import TheMenu from "@/components/TheMenu.vue";
+import setActiveMenu from "@/mixins/setActiveMenu.js";
 
 export default {
   name: 'ChamadosView',
   components: {   
     TheMenu
   },
+  mixins: [setActiveMenu],
   data(){
         return{
           
@@ -28,6 +30,9 @@ export default {
     },
     methods: {
                        
+    }, 
+    mounted() {      
+      this.setActiveMenu('chamados')
     }
 }
 </script>

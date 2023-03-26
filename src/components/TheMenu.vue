@@ -88,7 +88,7 @@ export default {
 
           p{
             font-weight: 700;
-            font-size: .85em;
+            font-size: .9em;
             color: #fff;            
             line-height: 1.1em;
             display: inline-block;                      

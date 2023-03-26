@@ -107,14 +107,24 @@ section{
     .erros{
       width: 100%;
       border: 1px solid #fff;
-      padding: .5em 2em 1em 2em;
+      padding: 1em 2em;
       color: #fff;
       margin-bottom: 1em;
+
+      p, ul{
+        margin-bottom: 10px;
+        color: #fff;
+      }
     }
 
     .form-item{
       width: 100%;
-      margin: 0 0 2em 0;      
+      margin: 0 0 2em 0;  
+      
+      label{
+        color: #fff;
+        margin-bottom: 10px;
+      }
     }
 
     .conectado{
@@ -127,6 +137,7 @@ section{
       label{
         display: inline-block;        
         padding: 10px 0 0 0;
+        color: #fff;
       }      
     }
 

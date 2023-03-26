@@ -80,54 +80,30 @@
 <script>
 
 import TheMenu from "@/components/TheMenu.vue";
+import setActiveMenu from "@/mixins/setActiveMenu.js";
 
 export default {
   name: 'MenusView',
   components: {   
     TheMenu
   },
+  mixins: [setActiveMenu],
   data(){
-        return{
-          
-        }
-    },
-    methods: {
-                       
-    }
+      return{
+        
+      }
+  },
+  methods: {
+    /*setActiveMenu(){
+      document.querySelector('#menus .item.gerenciador').classList.add('active');
+    }  */                
+  },
+  mounted(){
+    this.setActiveMenu('gerenciador')
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-
-#main{
-  //display: flex;
-  
-  #content{
-   // width: 100%;
-
-    .container{
-     
-      form{
-
-        /*.form-item.flex{
-          display: flex;
-          align-items: center;
-          width: 100%;
-          margin: 0 0 20px 0;
-
-          label{
-            width: 50%;  
-            margin: 0;          
-          }
-          select{
-              width: 50%;
-            }
-        }*/
-      }
-
-    }
-  }
-
-}
 
 </style>
