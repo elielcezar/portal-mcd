@@ -56,14 +56,9 @@ export default {
         }
     },
     methods: {
-        handleSubmit(){
-            /*const dados = {                
-                login: this.login,
-                password: this.password                
-            };*/
+        handleSubmit(){           
             if(this.login && this.password){
-              this.loading = true;
-              //console.log('loading...');              
+              this.loading = true;              
               this.$router.push("/menus");
             }else{        
               this.errors = [];      
@@ -80,13 +75,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/*
-section{  
-  margin-bottom: 100px;
-  h2 {
-    text-transform: uppercase;
-  }    
-}*/
 
 #main{
   .container{
@@ -96,6 +84,7 @@ section{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background: transparent;
   }
 
   form{

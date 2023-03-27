@@ -5,7 +5,40 @@
 
     <div id="content">
       <div class="container">
-        <h2>Programacao</h2>
+        <h2>Programação Liga/Desliga</h2>
+
+        <table>
+              <tr>
+                <th>Loja</th>
+                <th>Horário</th>
+                <th>Liga/Desliga</th>                
+              </tr>
+              <tr>
+                <td>Loremipsum</td>                
+                <td><ComboHours /> <span>às</span> <ComboHours /></td>
+                <td><input type="checkbox" /></td>
+              </tr>                        
+              <tr>
+                <td>Loremipsum</td>
+                <td><ComboHours /> <span>às</span> <ComboHours /></td>
+                <td><input type="checkbox" /></td>
+              </tr>   
+              <tr>
+                <td>Loremipsum</td>                
+                <td><ComboHours /> <span>às</span> <ComboHours /></td>
+                <td><input type="checkbox" /></td>
+              </tr>   
+              <tr>
+                <td>Loremipsum</td>                
+                <td><ComboHours /> <span>às</span> <ComboHours /></td>
+                <td><input type="checkbox" /></td>
+              </tr>   
+              <tr>
+                <td>Loremipsum</td>                
+                <td><ComboHours /> <span>às</span> <ComboHours /></td>
+                <td><input type="checkbox" /></td>
+              </tr>                 
+            </table>
         
       </div>
     </div>
@@ -15,12 +48,14 @@
 <script>
 
 import TheMenu from "@/components/TheMenu.vue";
+import ComboHours from "@/components/ComboHours.vue";
 import setActiveMenu from "@/mixins/setActiveMenu.js";
 
 export default {
   name: 'ProgramacaoView',
   components: {   
-    TheMenu
+    TheMenu,
+    ComboHours
   },
   mixins: [setActiveMenu],
   data(){

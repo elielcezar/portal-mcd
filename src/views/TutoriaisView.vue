@@ -6,7 +6,54 @@
     <div id="content">
       <div class="container">
         <h2>Tutoriais</h2>
-        
+
+        <div class="tutoriais">
+
+          <div class="item">
+            <div class="img">
+              <img src="@/assets/foto-tutorial.jpg" alt="">
+            </div>
+            <div class="info">
+              <h3>Chamado aberto com sucesso!</h3>
+              <span class="tempo">00:00</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce iaculis quam sed nulla auctor.</p>
+            </div>
+          </div><!-- item -->
+
+          <div class="item">
+            <div class="img">
+              <img src="@/assets/foto-tutorial.jpg" alt="">
+            </div>
+            <div class="info">
+              <h3>Chamado aberto com sucesso!</h3>
+              <span class="tempo">00:00</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce iaculis quam sed nulla auctor.</p>
+            </div>
+          </div><!-- item -->
+
+          <div class="item">
+            <div class="img">
+              <img src="@/assets/foto-tutorial.jpg" alt="">
+            </div>
+            <div class="info">
+              <h3>Chamado aberto com sucesso!</h3>
+              <span class="tempo">00:00</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce iaculis quam sed nulla auctor.</p>
+            </div>
+          </div><!-- item -->
+
+          <div class="item">
+            <div class="img">
+              <img src="@/assets/foto-tutorial.jpg" alt="">
+            </div>
+            <div class="info">
+              <h3>Chamado aberto com sucesso!</h3>
+              <span class="tempo">00:00</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce iaculis quam sed nulla auctor.</p>
+            </div>
+          </div><!-- item -->
+
+        </div>        
       </div>
     </div>
   </div>
