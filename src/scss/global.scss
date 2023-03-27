@@ -330,6 +330,30 @@ img{
   max-width: 100%;
 }
 
+table{
+  width: 100%;
+  max-width: 100%;  
+  border-collapse: collapse;  
+  thead{
+    tr{
+      th{
+        background: #dcdcdc;        
+        text-transform: uppercase;
+        padding: 10px;
+        font-weight: 700;
+        color: #494949;
+        text-align: left;
+      }
+    }
+  }
+  tr{
+    td{
+      padding: 10px;    
+      vertical-align: middle;  
+    }
+  }
+}
+
 section{
   overflow-x: hidden;
 }

@@ -31,36 +31,40 @@
           <div class="form-item produto">
             <h3>McLanche Feliz</h3>
             <table>
-              <tr>
-                <th>Nome do Produto</th>
-                <th>Valor</th>
-                <th>Ativa/Desativar</th>
-              </tr>
-              <tr>
-                <td>Brinquedos</td>
-                <td>R$0,00</td>
-                <td><input type="checkbox" /></td>
-              </tr>
-              <tr>
-                <td>Brinquedos</td>
-                <td>R$0,00</td>
-                <td><input type="checkbox" /></td>
-              </tr>
-              <tr>
-                <td>Brinquedos</td>
-                <td>R$0,00</td>
-                <td><input type="checkbox" /></td>
-              </tr>
-              <tr>
-                <td>Brinquedos</td>
-                <td>R$0,00</td>
-                <td><input type="checkbox" /></td>
-              </tr>
-              <tr>
-                <td>Brinquedos</td>
-                <td>R$0,00</td>
-                <td><input type="checkbox" /></td>
-              </tr>             
+              <thead>
+                <tr>
+                  <th>Nome do Produto</th>
+                  <th>Valor</th>
+                  <th>Ativa/Desativar</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                  <td>Brinquedos</td>
+                  <td>R$0,00</td>
+                  <td><CheckBox /></td>
+                </tr>
+                <tr>
+                  <td>Brinquedos</td>
+                  <td>R$0,00</td>
+                  <td><CheckBox /></td>
+                </tr>
+                <tr>
+                  <td>Brinquedos</td>
+                  <td>R$0,00</td>
+                  <td><CheckBox /></td>
+                </tr>
+                <tr>
+                  <td>Brinquedos</td>
+                  <td>R$0,00</td>
+                  <td><CheckBox /></td>
+                </tr>
+                <tr>
+                  <td>Brinquedos</td>
+                  <td>R$0,00</td>
+                  <td><CheckBox /></td>
+                </tr>  
+              </tbody>                                       
             </table>
           </div>
 
@@ -80,12 +84,14 @@
 <script>
 
 import TheMenu from "@/components/TheMenu.vue";
+import CheckBox from "@/components/CheckBox.vue";
 import setActiveMenu from "@/mixins/setActiveMenu.js";
 
 export default {
   name: 'MenusView',
   components: {   
-    TheMenu
+    TheMenu,
+    CheckBox
   },
   mixins: [setActiveMenu],
   data(){
@@ -94,9 +100,7 @@ export default {
       }
   },
   methods: {
-    /*setActiveMenu(){
-      document.querySelector('#menus .item.gerenciador').classList.add('active');
-    }  */                
+            
   },
   mounted(){
     this.setActiveMenu('gerenciador')

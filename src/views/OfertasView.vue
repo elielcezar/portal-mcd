@@ -47,49 +47,49 @@
                 <td>R$0,00</td>
                 <td><ComboHours /></td>
                 <td><ComboHours /></td>
-                <td><input type="checkbox" /></td>
+                <td><CheckBox /></td>
               </tr>                        
               <tr>
                 <td>Segunda-feira</td>
                 <td>R$0,00</td>
                 <td><ComboHours /></td>
                 <td><ComboHours /></td>
-                <td><input type="checkbox" /></td>
+                <td><CheckBox /></td>
               </tr>   
               <tr>
                 <td>Terça-feira</td>
                 <td>R$0,00</td>
                 <td><ComboHours /></td>
                 <td><ComboHours /></td>
-                <td><input type="checkbox" /></td>
+                <td><CheckBox /></td>
               </tr>   
               <tr>
                 <td>Quarta-feira</td>
                 <td>R$0,00</td>
                 <td><ComboHours /></td>
                 <td><ComboHours /></td>
-                <td><input type="checkbox" /></td>
+                <td><CheckBox /></td>
               </tr>   
               <tr>
                 <td>Quinta-feira</td>
                 <td>R$0,00</td>
                 <td><ComboHours /></td>
                 <td><ComboHours /></td>
-                <td><input type="checkbox" /></td>
+                <td><CheckBox /></td>
               </tr>   
               <tr>
                 <td>Sexta-feira</td>
                 <td>R$0,00</td>
                 <td><ComboHours /></td>
                 <td><ComboHours /></td>
-                <td><input type="checkbox" /></td>
+                <td><CheckBox /></td>
               </tr>   
                <tr>
                 <td>Sábado</td>
                 <td>R$0,00</td>
                 <td><ComboHours /></td>
                 <td><ComboHours /></td>
-                <td><input type="checkbox" /></td>
+                <td><CheckBox /></td>
               </tr>   
             </table>
           </div>
@@ -111,6 +111,7 @@
 
 import TheMenu from "@/components/TheMenu.vue";
 import ComboHours from "@/components/ComboHours.vue";
+import CheckBox from "@/components/CheckBox.vue";
 import setActiveMenu from "@/mixins/setActiveMenu.js";
 
 export default {
@@ -118,6 +119,7 @@ export default {
   components: {   
     TheMenu,
     ComboHours,
+    CheckBox
   },
   mixins: [setActiveMenu],
   data(){

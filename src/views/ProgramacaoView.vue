@@ -16,27 +16,27 @@
               <tr>
                 <td>Loremipsum</td>                
                 <td><ComboHours /> <span>às</span> <ComboHours /></td>
-                <td><input type="checkbox" /></td>
+                <td><CheckBox /></td>
               </tr>                        
               <tr>
                 <td>Loremipsum</td>
                 <td><ComboHours /> <span>às</span> <ComboHours /></td>
-                <td><input type="checkbox" /></td>
+                <td><CheckBox /></td>
               </tr>   
               <tr>
                 <td>Loremipsum</td>                
                 <td><ComboHours /> <span>às</span> <ComboHours /></td>
-                <td><input type="checkbox" /></td>
+                <td><CheckBox /></td>
               </tr>   
               <tr>
                 <td>Loremipsum</td>                
                 <td><ComboHours /> <span>às</span> <ComboHours /></td>
-                <td><input type="checkbox" /></td>
+                <td><CheckBox /></td>
               </tr>   
               <tr>
                 <td>Loremipsum</td>                
                 <td><ComboHours /> <span>às</span> <ComboHours /></td>
-                <td><input type="checkbox" /></td>
+                <td><CheckBox /></td>
               </tr>                 
             </table>
         
@@ -49,13 +49,15 @@
 
 import TheMenu from "@/components/TheMenu.vue";
 import ComboHours from "@/components/ComboHours.vue";
+import CheckBox from "@/components/CheckBox.vue";
 import setActiveMenu from "@/mixins/setActiveMenu.js";
 
 export default {
   name: 'ProgramacaoView',
   components: {   
     TheMenu,
-    ComboHours
+    ComboHours,
+    CheckBox
   },
   mixins: [setActiveMenu],
   data(){
