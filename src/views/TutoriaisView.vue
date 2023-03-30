@@ -14,7 +14,7 @@
               <img src="@/assets/foto-tutorial.jpg" alt="">
             </div>
             <div class="info">
-              <h3>Chamado aberto com sucesso!</h3>
+              <h3><a href="#">Como alterar o preço de uma tela</a></h3>
               <span class="tempo">00:00</span>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce iaculis quam sed nulla auctor.</p>
             </div>
@@ -25,7 +25,7 @@
               <img src="@/assets/foto-tutorial.jpg" alt="">
             </div>
             <div class="info">
-              <h3>Chamado aberto com sucesso!</h3>
+              <h3><a href="#">Como alterar o preço de uma tela</a></h3>
               <span class="tempo">00:00</span>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce iaculis quam sed nulla auctor.</p>
             </div>
@@ -36,7 +36,7 @@
               <img src="@/assets/foto-tutorial.jpg" alt="">
             </div>
             <div class="info">
-              <h3>Chamado aberto com sucesso!</h3>
+              <h3><a href="#">Como alterar o preço de uma tela</a></h3>
               <span class="tempo">00:00</span>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce iaculis quam sed nulla auctor.</p>
             </div>
@@ -47,7 +47,7 @@
               <img src="@/assets/foto-tutorial.jpg" alt="">
             </div>
             <div class="info">
-              <h3>Chamado aberto com sucesso!</h3>
+              <h3><a href="#">Como alterar o preço de uma tela</a></h3>
               <span class="tempo">00:00</span>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce iaculis quam sed nulla auctor.</p>
             </div>
@@ -84,37 +84,71 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 #main{
   display: flex;
   
   #content{
     width: 100%;
-
     .container{
-      width: 80%;      
-      margin: auto;
-      background: #fff;
 
-      h2, h3, p, ul, label{
-        color: $preto;
-      }
+      .tutoriais{
+        display: flex;
+        flex-wrap: wrap;
 
-      form{
-        background: transparent;
-        padding: 0;
-        margin: 0;
-        border-radius: 0
+        @media(orientation:portrait){
+          flex-direction: column;
+        }
+        .item{
+          display: flex;          
+          width: 45%;
+          margin-bottom: 40px;
+          
+          &:nth-child(odd){            
+            margin-right: 5%;
+          }
+          &:nth-child(even){            
+            margin-left: 5%;
+          }
 
-        select{
-          color: $preto;
-          border: 1px solid #666 !important;
-          padding: 7px 15px;
-          border-radius: 50px;
+          @media(orientation:portrait){
+            width: 100%;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+          }
+
+          .img{
+            width: 55%;
+            margin-right: 5%;
+          }
+          .info{
+            width: 40%;
+
+            h3{
+              font-size: 1rem;
+              line-height: 1;
+              margin: 0 0 5px 0;
+
+              a{
+                color: $vermelho;
+              }
+            }
+
+            span.tempo{
+              font-size: .8rem;
+              font-weight: bold;
+            }
+
+            p{
+              margin: 0;
+              font-size: .8rem;
+              line-height: 1;
+            }
+          }
         }
       }
-
+     
     }
   }
 

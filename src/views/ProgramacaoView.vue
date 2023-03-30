@@ -8,36 +8,40 @@
         <h2>Programação Liga/Desliga</h2>
 
         <table>
-              <tr>
-                <th>Loja</th>
-                <th>Horário</th>
-                <th>Liga/Desliga</th>                
-              </tr>
-              <tr>
-                <td>Loremipsum</td>                
-                <td><ComboHours /> <span>às</span> <ComboHours /></td>
-                <td><CheckBox /></td>
-              </tr>                        
-              <tr>
-                <td>Loremipsum</td>
-                <td><ComboHours /> <span>às</span> <ComboHours /></td>
-                <td><CheckBox /></td>
-              </tr>   
-              <tr>
-                <td>Loremipsum</td>                
-                <td><ComboHours /> <span>às</span> <ComboHours /></td>
-                <td><CheckBox /></td>
-              </tr>   
-              <tr>
-                <td>Loremipsum</td>                
-                <td><ComboHours /> <span>às</span> <ComboHours /></td>
-                <td><CheckBox /></td>
-              </tr>   
-              <tr>
-                <td>Loremipsum</td>                
-                <td><ComboHours /> <span>às</span> <ComboHours /></td>
-                <td><CheckBox /></td>
-              </tr>                 
+              <thead>
+                <tr>
+                  <th>Loja</th>
+                  <th>Horário</th>
+                  <th>Liga/Desliga</th>                
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="loja">Loremipsum</td>                
+                  <td class="horario"><ComboHours /> <span>às</span> <ComboHours /></td>
+                  <td class="liga-desliga"><CheckBox /></td>
+                </tr>                        
+                <tr>
+                  <td class="loja">Loremipsum</td>                
+                  <td class="horario"><ComboHours /> <span>às</span> <ComboHours /></td>
+                  <td class="liga-desliga"><CheckBox /></td>
+                </tr>  
+                <tr>
+                  <td class="loja">Loremipsum</td>                
+                  <td class="horario"><ComboHours /> <span>às</span> <ComboHours /></td>
+                  <td class="liga-desliga"><CheckBox /></td>
+                </tr>  
+                <tr>
+                  <td class="loja">Loremipsum</td>                
+                  <td class="horario"><ComboHours /> <span>às</span> <ComboHours /></td>
+                  <td class="liga-desliga"><CheckBox /></td>
+                </tr>  
+                <tr>
+                  <td class="loja">Loremipsum</td>                
+                  <td class="horario"><ComboHours /> <span>às</span> <ComboHours /></td>
+                  <td class="liga-desliga"><CheckBox /></td>
+                </tr>  
+              </tbody>          
             </table>
         
       </div>
@@ -77,37 +81,18 @@ export default {
 <style lang="scss">
 
 #main{
-  display: flex;
-  
-  #content{
-    width: 100%;
 
-    .container{
-      width: 80%;      
-      margin: auto;
-      background: #fff;
+  table{
+    td.horario{
+      display: flex;
+      align-items: center;
 
-      h2, h3, p, ul, label{
-        color: $preto;
+      span{
+        display: inline-block;
+        margin: 0 20px;
       }
-
-      form{
-        background: transparent;
-        padding: 0;
-        margin: 0;
-        border-radius: 0
-
-        select{
-          color: $preto;
-          border: 1px solid #666 !important;
-          padding: 7px 15px;
-          border-radius: 50px;
-        }
-      }
-
     }
   }
-
 }
 
 </style>

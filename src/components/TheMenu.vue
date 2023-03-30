@@ -41,12 +41,24 @@ export default {
 
 #menus{
     background: $vermelho;
-    width: 20%;
+    width: 250px;
+    min-width: 250px;
     color: #fff;  
     display: flex;
     justify-content: flex-start;
+    flex-direction: column;
     padding: 20px 0 0 0;
     min-height: 100vh;
+
+    @media(orientation:portrait){
+      min-height: auto;
+      height: 18vh;
+      width: 100%;
+      flex-direction: row;
+      overflow-x: scroll;
+      overflow-y: hidden;      
+      padding: 15px 0 20px 0;
+    }
     
     .item{                            
           width: 100%;
@@ -59,7 +71,15 @@ export default {
           background-repeat: no-repeat;
           transition: all .3s;
           text-align: left;    
-          cursor: pointer;         
+          cursor: pointer;   
+          
+          @media(orientation:portrait){
+            padding: 4.5em 1em 1em 1em;
+            background-position: top center;
+            width: 100px;
+            min-width: 100px;
+            font-size: .7em;
+          }
           
           &.gerenciador{            
             background-image: url(@/assets/ico-hamburguer.png);
@@ -97,6 +117,13 @@ export default {
             display: flex;
             align-items: center;
             transition: all .3s;
+
+            @media(orientation:portrait){             
+              max-width: 100%;
+              width: 100%;
+              justify-content: center;
+              text-align: center;
+            }
           }
         }
 

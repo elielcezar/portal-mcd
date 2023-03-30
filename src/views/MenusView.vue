@@ -1,5 +1,6 @@
 <template>
-  <div id="menus">  
+  <div id="content">  
+    <div id="menus">
     <div class="container">      
       <div class="carrossel">         
             <div class="item gerenciador" @click="$router.push('/gerenciador')">
@@ -28,6 +29,7 @@
             </div>    
       </div>   
     </div>
+  </div>
   </div>
 </template>
 
@@ -78,9 +80,12 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
-#menus{
+#content{
+  width: 100%;
+
+  #menus{
   width: 100%;
   height: 100vh;
   display: flex;
@@ -193,6 +198,8 @@ export default {
   }
 
 
+
+}
 
 
 

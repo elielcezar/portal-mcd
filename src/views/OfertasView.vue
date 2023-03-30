@@ -35,62 +35,61 @@
 
           <div class="form-item produto">
             <h3>McLanche Feliz</h3>
+
+
             <table>
-              <tr>
-                <th>Dia</th>
-                <th>Abrir</th>
-                <th>Fechar</th>
-                <th>Aberto 24h</th>
-              </tr>
-              <tr>
-                <td>Domingo</td>
-                <td>R$0,00</td>
-                <td><ComboHours /></td>
-                <td><ComboHours /></td>
-                <td><CheckBox /></td>
-              </tr>                        
-              <tr>
-                <td>Segunda-feira</td>
-                <td>R$0,00</td>
-                <td><ComboHours /></td>
-                <td><ComboHours /></td>
-                <td><CheckBox /></td>
-              </tr>   
-              <tr>
-                <td>Terça-feira</td>
-                <td>R$0,00</td>
-                <td><ComboHours /></td>
-                <td><ComboHours /></td>
-                <td><CheckBox /></td>
-              </tr>   
-              <tr>
-                <td>Quarta-feira</td>
-                <td>R$0,00</td>
-                <td><ComboHours /></td>
-                <td><ComboHours /></td>
-                <td><CheckBox /></td>
-              </tr>   
-              <tr>
-                <td>Quinta-feira</td>
-                <td>R$0,00</td>
-                <td><ComboHours /></td>
-                <td><ComboHours /></td>
-                <td><CheckBox /></td>
-              </tr>   
-              <tr>
-                <td>Sexta-feira</td>
-                <td>R$0,00</td>
-                <td><ComboHours /></td>
-                <td><ComboHours /></td>
-                <td><CheckBox /></td>
-              </tr>   
-               <tr>
-                <td>Sábado</td>
-                <td>R$0,00</td>
-                <td><ComboHours /></td>
-                <td><ComboHours /></td>
-                <td><CheckBox /></td>
-              </tr>   
+              <thead>
+                <tr>
+                  <th>Dia</th>
+                  <th>Abrir</th>
+                  <th>Fechar</th>
+                  <th>Aberto 24h</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="dia">Domingo</td>                  
+                  <td class="abrir"><ComboHours /></td>
+                  <td class="fechar"><ComboHours /></td>
+                  <td class="aberto"><CheckBox /></td>
+                </tr>                        
+                <tr>
+                  <td class="dia">Segunda</td>                  
+                  <td class="abrir"><ComboHours /></td>
+                  <td class="fechar"><ComboHours /></td>
+                  <td class="aberto"><CheckBox /></td>
+                </tr>   
+                <tr>
+                  <td class="dia">Terça-feira</td>                  
+                  <td class="abrir"><ComboHours /></td>
+                  <td class="fechar"><ComboHours /></td>
+                  <td class="aberto"><CheckBox /></td>
+                </tr>   
+                <tr>
+                  <td class="dia">Quarta-feira</td>                  
+                  <td class="abrir"><ComboHours /></td>
+                  <td class="fechar"><ComboHours /></td>
+                  <td class="aberto"><CheckBox /></td>
+                </tr>   
+                <tr>
+                  <td class="dia">Quinta-feira</td>                  
+                  <td class="abrir"><ComboHours /></td>
+                  <td class="fechar"><ComboHours /></td>
+                  <td class="aberto"><CheckBox /></td>
+                </tr>   
+                <tr>
+                  <td class="dia">Sexta-feira</td>                  
+                  <td class="abrir"><ComboHours /></td>
+                  <td class="fechar"><ComboHours /></td>
+                  <td class="aberto"><CheckBox /></td>
+                </tr>   
+                <tr>
+                  <td class="dia">Sábado</td>                  
+                  <td class="abrir"><ComboHours /></td>
+                  <td class="fechar"><ComboHours /></td>
+                  <td class="aberto"><CheckBox /></td>
+                </tr>    
+              </tbody>
             </table>
           </div>
 
@@ -136,37 +135,22 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
-#main{
-  display: flex;
-  
+#main{   
   #content{
-    width: 100%;
+    .container{      
+      table{
+        td.aberto{
+          text-align: center;
 
-    .container{
-      width: 80%;      
-      margin: auto;
-      background: #fff;
-
-      h2, h3, p, ul, label{
-        color: $preto;
-      }
-
-      form{
-        background: transparent;
-        padding: 0;
-        margin: 0;
-        border-radius: 0
-
-        select{
-          color: $preto;
-          border: 1px solid #666 !important;
-          padding: 7px 15px;
-          border-radius: 50px;
+          label{
+            input{
+              margin: auto;
+            }
+          }
         }
       }
-
     }
   }
 

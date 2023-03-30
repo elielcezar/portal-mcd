@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
 html {
   scroll-behavior: smooth;
 }
@@ -7,10 +7,10 @@ body {
   margin: 0;
   padding: 0;
   color: #4c4d4d;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 17px;
   font-weight: 400;
-  background: #f5f5f5 url(@/assets/bg.jpg) top center no-repeat;
+  background: #da291c;
   background-size: cover;
 }
 
@@ -26,8 +26,19 @@ h3,
 h4,
 h5 {
   font-weight: 800;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
+}
+
+#content {
+  background: #f5f5f5 url(@/assets/bg.jpg) top center no-repeat;
+  background-size: cover;
+  width: calc(100% - 250px);
+}
+@media (orientation: portrait) {
+  #content {
+    width: 100%;
+  }
 }
 
 section .title {
@@ -220,7 +231,7 @@ form input[type=date] {
   border-radius: 50px;
   border: 1px solid #ccc;
   font-size: 1em;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 select {
@@ -334,6 +345,11 @@ section {
 #main {
   display: flex;
 }
+@media (orientation: portrait) {
+  #main {
+    flex-direction: column;
+  }
+}
 #main .container {
   max-width: 1300px;
   margin: auto;
@@ -343,6 +359,18 @@ section {
   padding: 3% !important;
   justify-content: flex-start;
   min-height: 100vh;
+}
+@media (max-width: 1600px) {
+  #main .container {
+    width: 100%;
+  }
+}
+@media (orientation: portrait) {
+  #main .container {
+    padding: 7%;
+    width: 100%;
+    border: 1px solid red;
+  }
 }
 #main .container h2, #main .container h3, #main .container p, #main .container ul, #main .container label {
   color: #333;
@@ -361,4 +389,12 @@ section {
   #main .container {
     max-width: 1200px;
   }
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  font-size: 0.8rem;
+  text-align: center;
 }/*# sourceMappingURL=global.css.map */

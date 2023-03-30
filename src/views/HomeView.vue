@@ -1,5 +1,5 @@
 <template>
-  <div id="main">  
+  <div id="content">  
 
     <div class="container">
      
@@ -76,7 +76,8 @@ export default {
 
 <style lang="scss" scoped>
 
-#main{
+#content{
+  width: 100%;
   .container{
     width: 100%;
     height: 100vh;
@@ -84,8 +85,9 @@ export default {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: transparent;
+    background: transparent;    
   }
+
 
   form{
     border-radius: 30px;

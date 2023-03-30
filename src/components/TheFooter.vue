@@ -1,5 +1,6 @@
 <template>
   <footer>
+    <p>© 2020 MegaMidia Group. Todos os direitos reservados. Política de privacidade e Termos de uso.</p>
   </footer>
 </template>
 
