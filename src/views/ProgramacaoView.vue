@@ -7,12 +7,14 @@
       <div class="container">
         <h2>Programação Liga/Desliga</h2>
 
+        <form>
+
         <table>
               <thead>
                 <tr>
                   <th>Loja</th>
                   <th>Horário</th>
-                  <th>Liga/Desliga</th>                
+                  <th class="center">Liga/Desliga</th>                
                 </tr>
               </thead>
               <tbody>
@@ -43,6 +45,8 @@
                 </tr>  
               </tbody>          
             </table>
+
+          </form>
         
       </div>
     </div>

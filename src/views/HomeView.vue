@@ -134,6 +134,8 @@ export default {
 
     button{
         background: $vermelho-escuro;        
+        max-width: 100%;
+        width: 100%;
       }
   }
 }

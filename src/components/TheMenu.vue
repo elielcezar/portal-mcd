@@ -47,7 +47,7 @@ export default {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    padding: 20px 0 0 0;
+    padding: 0;
     min-height: 100vh;
 
     @media(orientation:portrait){
@@ -62,7 +62,7 @@ export default {
     
     .item{                            
           width: 100%;
-          padding: 10px 0 10px 100px;
+          padding: 15px 0 15px 100px;
           margin: 0;
           display: flex;
           justify-content: flex-start;
@@ -72,6 +72,7 @@ export default {
           transition: all .3s;
           text-align: left;    
           cursor: pointer;   
+          box-shadow: 0px -2px 4px rgba(0,0,0,.1);
           
           @media(orientation:portrait){
             padding: 4.5em 1em 1em 1em;
@@ -128,9 +129,10 @@ export default {
         }
 
         .item.active,
-        .item:hover{            
+        .item:hover{ 
+          background-color: #c52519;           
           p{
-            color: $amarelo;
+            color: $amarelo;            
           }
         }
 

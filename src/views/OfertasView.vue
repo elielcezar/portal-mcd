@@ -43,7 +43,7 @@
                   <th>Dia</th>
                   <th>Abrir</th>
                   <th>Fechar</th>
-                  <th>Aberto 24h</th>
+                  <th class="center">Aberto 24h</th>
                 </tr>
               </thead>
               <tbody>

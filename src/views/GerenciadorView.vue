@@ -37,7 +37,7 @@
                 <tr>
                   <th>Nome do Produto</th>
                   <th>Valor</th>
-                  <th>Ativa/Desativar</th>
+                  <th class="center">Ativa/Desativar</th>
                 </tr>
               </thead>
               <tbody>
@@ -71,7 +71,7 @@
           </div>
 
           <div class="form-item">
-            <button class="btn enviar">Enviar</button>
+            <button class="btn enviar green">Enviar</button>
           </div>
           
         </form>
@@ -111,5 +111,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+button{
+  max-width: 200px;  
+}
 </style>

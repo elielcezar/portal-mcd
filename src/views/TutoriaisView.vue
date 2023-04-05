@@ -126,7 +126,7 @@ export default {
             width: 40%;
 
             h3{
-              font-size: 1rem;
+              font-size: 1.2rem;
               line-height: 1;
               margin: 0 0 5px 0;
 

@@ -47,7 +47,7 @@
                     <input type="date" id="start-2" name="trip-start-2" value="2023-03-24" min="2018-01-01" max="2023-03-24">
                   </div>
                   <div class="form-item">
-                    <button class="btn encerrar">Encerrar</button>
+                    <button class="btn green">Iniciar</button>
                   </div>                  
                 </form>
             </div>

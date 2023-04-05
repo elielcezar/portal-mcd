@@ -5,6 +5,8 @@ $cinza: #d7dce4;
 $vermelho: #da291c;
 $vermelho-escuro: #8b1515;
 $amarelo: #ffcd00;
+$verde: #68cc06;
+$verde-escuro: #4f9f00;
 
 html{
   scroll-behavior: smooth;  
@@ -202,7 +204,11 @@ form {
       }
   }
 
-  input[type="submit"] {    
+  input[type="checkbox"]{
+    margin: auto;
+  }
+
+  input[type="submit"] {   
 
     &:hover {
       background: #000;
@@ -212,33 +218,16 @@ form {
   input[type='text'],
   input[type='email'],
   input[type='password'], 
-  textarea {
+  textarea {    
     width: 100%;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 50px;
     background: #fff;
-    margin-bottom: 10px;
-    font-size: 16px;
-    outline: none !important;
-    box-sizing: border-box;
+    box-shadow: 0 0 4px rgba(0,0,0,.2);
     border: none;
-    border-width: 1px 1px 2px 1px;
-    border-radius: 25px;
-    padding: 15px 20px;
-    margin: 0 5px;  
-    font-family: 'Raleway', sans-serif;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;    
-    transition: all .3s;
-
-    &:focus{
-      border-color: $vermelho;
-    }
-
-    @media (max-width: 767px) {
-      padding: 5%;
-      width: 100%;
-      margin: 0;
-    }
+    color: $preto;
+    font-weight: 500;    
   }
 
   input[type="date"]{
@@ -261,17 +250,21 @@ select{
   font-weight: 700;
 }
 
+
+
+
+
 button,
 input[type='submit'] {
   color: #fff;  
-  padding: 15px 30px;
+  padding: 10px 30px;
   font-size: 15px;
   border: none;
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 800;
+  font-weight: 600;
   outline: none !important;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -282,9 +275,18 @@ input[type='submit'] {
   width: 100%;
   background: $vermelho;
   transition: all .3s;  
+  max-width: 200px;
 
   &:hover {    
     background: $vermelho-escuro;
+  }
+}
+
+button.green{
+  background: $verde;
+
+  &:hover{
+    background: $verde-escuro;
   }
 }
 
@@ -352,6 +354,10 @@ table{
         font-weight: 700;
         color: #494949;
         text-align: left;
+
+        &.center{
+          text-align: center;
+        }
       }
     }
   }

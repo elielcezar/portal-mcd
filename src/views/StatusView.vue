@@ -85,7 +85,7 @@
                 </div>              
                 <form action="">
                   <div class="form-item">
-                    <p><strong>Status:</strong> <span class="status online">Offline</span>
+                    <p><strong>Status:</strong> <span class="status online">Online</span>
                     </p>
                   </div>                  
                   <div class="form-item">
@@ -106,7 +106,7 @@
                 </div>              
                 <form action="">
                   <div class="form-item">
-                    <p><strong>Status:</strong> <span class="status online">Offline</span>
+                    <p><strong>Status:</strong> <span class="status online">Online</span>
                     </p>
                   </div>                  
                   <div class="form-item">
@@ -127,7 +127,7 @@
                 </div>              
                 <form action="">
                   <div class="form-item">
-                    <p><strong>Status:</strong> <span class="status online">Offline</span>
+                    <p><strong>Status:</strong> <span class="status online">Online</span>
                     </p>
                   </div>                  
                   <div class="form-item">
@@ -285,7 +285,11 @@ export default {
             font-weight: 700;
 
             &.ligar{
-              background: #00b800;
+              background: $verde;
+
+              &:hover{
+                background: $verde-escuro;
+              }
             }
             &.reiniciar{
               background: #ffbb00;
